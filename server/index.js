@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 require('dotenv').config();
 const cors = require("cors");
-const aiRouter = require("./routes/chatRouter")
+const aiRouter = require("./src/routes/chatRouter")
 
 app.use(express.json());
 app.use(cors({
