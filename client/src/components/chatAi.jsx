@@ -20,10 +20,7 @@ const ChatAi = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
-  // ✅ Clean function to strip stars and extra symbols
-  const cleanText = (text) => {
-    return text.replace(/\*/g, "").trim();
-  };
+  const cleanText = (text) => text.replace(/\*/g, "").trim();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -45,9 +42,7 @@ const ChatAi = () => {
         ...prev,
         {
           role: "model",
-          parts: [
-            { text: cleanText(response.data.message || "...") }, // ✅ clean here
-          ],
+          parts: [{ text: cleanText(response.data.message || "...") }],
         },
       ]);
     } catch (error) {
@@ -56,18 +51,14 @@ const ChatAi = () => {
         ...prev,
         {
           role: "model",
-          parts: [
-            { text: "⚠️ I encountered an error. Please try again." },
-          ],
+          parts: [{ text: "⚠️ I encountered an error. Please try again." }],
         },
       ]);
     }
   };
 
   return (
-    <div className="flex flex-col h-screen text-gray-100 relative 
-      bg-gradient-to-br from-black via-gray-900 to-green-950">
-      
+    <div className="flex flex-col h-screen text-gray-100 bg-gradient-to-br from-black via-gray-900 to-green-950">
       {/* Header */}
       <div className="bg-green-800/90 backdrop-blur-md text-white p-4 flex items-center justify-center shadow-md z-10">
         <img
@@ -78,14 +69,15 @@ const ChatAi = () => {
         <h1 className="font-bold text-lg">Jharkhand Tourism Chatbot</h1>
       </div>
 
-      {/* Chat Container */}
-      <div className="flex-1 flex justify-center px-4 py-6 relative z-10">
-        <div className="w-full max-w-3xl flex flex-col 
+      {/* Chat Container Wrapper */}
+      <div className="flex-1 flex justify-center px-4 py-6 overflow-hidden"> {/* <-- FIX APPLIED HERE */}
+        <div
+          className="w-full max-w-3xl flex flex-col 
           bg-gradient-to-br from-gray-900/80 via-black/70 to-green-950/80 
-          backdrop-blur-md rounded-2xl shadow-2xl border border-gray-800 p-6">
-          
-          {/* Chat Messages */}
-          <div className="flex-1 overflow-y-auto space-y-4">
+          backdrop-blur-md rounded-2xl shadow-2xl border border-gray-800"
+        >
+          {/* Messages (scrollable area) */}
+          <div className="flex-1 overflow-y-auto space-y-4 p-6 pr-2">
             {messages.map((msg, index) => (
               <div
                 key={index}
@@ -100,17 +92,17 @@ const ChatAi = () => {
                       : "bg-gray-800 text-gray-100 border border-gray-700 rounded-bl-none"
                   }`}
                 >
-                  {cleanText(msg.parts[0].text)}
+                  {msg.parts[0].text}
                 </div>
               </div>
             ))}
             <div ref={messagesEndRef} />
           </div>
 
-          {/* Input */}
+          {/* Input Bar */}
           <form
             onSubmit={handleSubmit}
-            className="mt-4 p-2 flex items-center bg-gray-800/70 rounded-full border border-gray-700"
+            className="p-3 flex items-center bg-gray-800/70 border-t border-gray-700"
           >
             <input
               value={input}
