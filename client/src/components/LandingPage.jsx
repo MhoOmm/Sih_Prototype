@@ -1,10 +1,13 @@
 import PlaceCard from './PlaceCard';
-
+import parasnath from "../assets/Pics/LEAD IMAGE_MAN_3231.jpg"
+import baidyanath from "../assets/Pics/Deoghar-Baidyanath-Temple.jpeg"
+import dassam from "../assets/Pics/dassam-falls-ranchi-jharkhand-ranchi-1-attr-hero.jpeg"
+import jonha from "../assets/Pics/1662583016Jonha_Waterfalls,_Ranchi,_Jharkhand.jpg"
 const places = [
-  { id: 1, name: 'Jonha Falls', description: 'Also known as Gautamdhara, this stunning waterfall is a popular picnic spot.', imageUrl: 'https://www.connectingtraveller.com/images/localtip/1662583016Jonha_Waterfalls,_Ranchi,_Jharkhand.jpg', link: '/places/jonha-falls' },
-  { id: 2, name: 'Dassam Falls', description: 'A breathtaking cascade where the Kanchi River falls from a height of 144 feet.', imageUrl: 'https://s7ap1.scene7.com/is/image/incredibleindia/dassam-falls-ranchi-jharkhand-ranchi-1-attr-hero?qlt=82&ts=1727010932624', link: '/places/dassam-falls' },
-  { id: 3, name: 'Baidyanath Temple', description: 'One of the twelve Jyotirlingas, this ancient temple complex is a major pilgrimage site.', imageUrl: 'https://behindeverytemple.org/wp-content/uploads/2020/09/Deoghar-Baidyanath-Temple.jpeg', link: '/places/baidyanath-temple' },
-  { id: 4, name: 'Parasnath Hills', description: 'The highest peak in Jharkhand and a major Jain pilgrimage center with serene temples.', imageUrl: 'https://th-i.thgim.com/public/incoming/miyvfu/article66409215.ece/alternates/LANDSCAPE_1200/LEAD%20IMAGE_MAN_3231.jpg', link: '/places/parasnath-hills' }
+  { id: 1, name: 'Jonha Falls', description: 'Also known as Gautamdhara, this stunning waterfall is a popular picnic spot.', imageUrl:`${jonha}` , link: '/places/jonha-falls' },
+  { id: 2, name: 'Dassam Falls', description: 'A breathtaking cascade where the Kanchi River falls from a height of 144 feet.', imageUrl: `${dassam}`, link: '/places/dassam-falls' },
+  { id: 3, name: 'Baidyanath Temple', description: 'One of the twelve Jyotirlingas, this ancient temple complex is a major pilgrimage site.', imageUrl: `${baidyanath}`, link: '/places/baidyanath-temple' },
+  { id: 4, name: 'Parasnath Hills', description: 'The highest peak in Jharkhand and a major Jain pilgrimage center with serene temples.', imageUrl:`${parasnath}`, link: '/places/parasnath-hills' }
 ];
 
 const LandingPage = () => {
