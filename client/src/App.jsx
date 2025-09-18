@@ -7,15 +7,22 @@ import LandingPage from './components/LandingPage';
 import VirtualTour from './components/VirtualTour';
 import Marketplaces from './components/MarketPlaces';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import PlaceDetail from './components/PlaceDetail';
 =======
+=======
+import PlaceDetail from './components/PlaceDetail';
+>>>>>>> 3b8099a1dfcaf16384f12fc2e407873947b8dda8
 import Login from './components/Login';
 import SignupSeller from './components/SignupSeller';
 import SignupUser from './components/SignupUser';
 
+<<<<<<< HEAD
 
 >>>>>>> 0319141684618109d44716df39e1dd7278d6e4b3
 
+=======
+>>>>>>> 3b8099a1dfcaf16384f12fc2e407873947b8dda8
 const Logout = () => {
   return (
     <div className="flex items-center justify-center h-screen bg-black text-white">
@@ -40,14 +47,12 @@ function App() {
         <Route path="/chat" element={<ChatAi />} />
         <Route path="/logout" element={<Logout />} />
         <Route path="/govt-coin-dash" element={<GovtCoinDashboard />} />
-
-        <Route path= "/login" element={<Login/>}/>
-        <Route path= "/signupuser" element={<SignupUser/>}/>
-        <Route path= "/signupseller" element={<SignupSeller/>}/>
+        <Route path="/login" element={<Login />} />
+        <Route path="/signupuser" element={<SignupUser />} />
+        <Route path="/signupseller" element={<SignupSeller />} />
       </Routes>
     </Router>
   );
 }
 
 export default App;
-
