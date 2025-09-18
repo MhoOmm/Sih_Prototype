@@ -25,7 +25,7 @@ const Navbar = () => {
                 alt="Jharkhand Logo" 
                 className="h-8 w-8 rounded-lg scale-180" 
               />
-              <span className="font-bold text-2xl text-white">Arnaya</span>
+              <span className="font-bold text-2xl text-white">Aranya</span>
             </Link>
           </div>
           
