@@ -6,7 +6,15 @@ import Layout from './components/Layout';
 import LandingPage from './components/LandingPage';
 import VirtualTour from './components/VirtualTour';
 import Marketplaces from './components/MarketPlaces';
+<<<<<<< HEAD
 import PlaceDetail from './components/PlaceDetail';
+=======
+import Login from './components/Login';
+import SignupSeller from './components/SignupSeller';
+import SignupUser from './components/SignupUser';
+
+
+>>>>>>> 0319141684618109d44716df39e1dd7278d6e4b3
 
 const Logout = () => {
   return (
@@ -32,6 +40,10 @@ function App() {
         <Route path="/chat" element={<ChatAi />} />
         <Route path="/logout" element={<Logout />} />
         <Route path="/govt-coin-dash" element={<GovtCoinDashboard />} />
+
+        <Route path= "/login" element={<Login/>}/>
+        <Route path= "/signupuser" element={<SignupUser/>}/>
+        <Route path= "/signupseller" element={<SignupSeller/>}/>
       </Routes>
     </Router>
   );
