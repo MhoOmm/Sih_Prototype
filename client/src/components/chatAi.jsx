@@ -1,6 +1,10 @@
 import { useState, useEffect, useRef } from "react";
 import { Send } from "lucide-react";
 import axiosClient from "../utils/axioscli";
+import jharkhand from "../assets/jonha-falls-ranchi-jharkhand-new.jpeg"
+
+
+const waterfallImage = jharkhand;
 
 const ChatAi = () => {
   const [messages, setMessages] = useState([
@@ -58,65 +62,70 @@ const ChatAi = () => {
   };
 
   return (
-    <div className="flex flex-col h-screen text-gray-100 bg-gradient-to-br from-black via-gray-900 to-green-950">
-      {/* Header */}
-      <div className="bg-green-800/90 backdrop-blur-md text-white p-4 flex items-center justify-center shadow-md z-10">
-        <img
-          src="https://pbs.twimg.com/profile_images/1966113235117166592/yV1jcTwe_400x400.jpg"
-          alt="Jharkhand Logo"
-          className="h-8 mr-2"
-        />
-        <h1 className="font-bold text-lg">Jharkhand Tourism Chatbot</h1>
-      </div>
+    <div className="flex h-screen bg-black">
+      {/* Left Side: Image Panel */}
+      <div
+        className="hidden md:block w-1/2 bg-cover bg-center"
+        style={{ backgroundImage: `url(${waterfallImage})` }}
+      />
 
-      {/* Chat Container Wrapper */}
-      <div className="flex-1 flex justify-center px-4 py-6 overflow-hidden"> {/* <-- FIX APPLIED HERE */}
-        <div
-          className="w-full max-w-3xl flex flex-col 
-          bg-gradient-to-br from-gray-900/80 via-black/70 to-green-950/80 
-          backdrop-blur-md rounded-2xl shadow-2xl border border-gray-800"
-        >
-          {/* Messages (scrollable area) */}
-          <div className="flex-1 overflow-y-auto space-y-4 p-6 pr-2">
-            {messages.map((msg, index) => (
-              <div
-                key={index}
-                className={`flex ${
-                  msg.role === "user" ? "justify-end" : "justify-start"
-                }`}
-              >
+      {/* Right Side: Chat Panel */}
+      <div className="w-full md:w-1/2 flex flex-col text-gray-100 bg-gradient-to-br from-black via-gray-900 to-green-950">
+        {/* Header */}
+        <div className="bg-green-800/90 backdrop-blur-md text-white p-4 flex items-center justify-center shadow-md z-10">
+          <img
+            src="https://pbs.twimg.com/profile_images/1966113235117166592/yV1jcTwe_400x400.jpg"
+            alt="Jharkhand Logo"
+            className="h-8 mr-2"
+          />
+          <h1 className="font-bold text-lg">Meera : Multi-Lingual Chatbot</h1>
+        </div>
+
+        {/* Chat Container Wrapper */}
+        <div className="flex-1 flex justify-center p-4 overflow-hidden">
+          <div className="w-full h-full flex flex-col bg-gray-900/50 backdrop-blur-sm rounded-2xl shadow-2xl border border-gray-800">
+            {/* Messages (scrollable area) */}
+            <div className="flex-1 overflow-y-auto space-y-4 p-6 pr-2">
+              {messages.map((msg, index) => (
                 <div
-                  className={`rounded-2xl px-4 py-2 max-w-md text-sm shadow-md whitespace-pre-line ${
-                    msg.role === "user"
-                      ? "bg-green-600 text-white rounded-br-none"
-                      : "bg-gray-800 text-gray-100 border border-gray-700 rounded-bl-none"
+                  key={index}
+                  className={`flex ${
+                    msg.role === "user" ? "justify-end" : "justify-start"
                   }`}
                 >
-                  {msg.parts[0].text}
+                  <div
+                    className={`rounded-2xl px-4 py-2 max-w-md text-sm shadow-md whitespace-pre-line ${
+                      msg.role === "user"
+                        ? "bg-green-600 text-white rounded-br-none"
+                        : "bg-gray-800 text-gray-100 border border-gray-700 rounded-bl-none"
+                    }`}
+                  >
+                    {msg.parts[0].text}
+                  </div>
                 </div>
-              </div>
-            ))}
-            <div ref={messagesEndRef} />
-          </div>
+              ))}
+              <div ref={messagesEndRef} />
+            </div>
 
-          {/* Input Bar */}
-          <form
-            onSubmit={handleSubmit}
-            className="p-3 flex items-center bg-gray-800/70 border-t border-gray-700"
-          >
-            <input
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              className="flex-grow bg-transparent text-gray-100 px-4 py-2 focus:outline-none"
-              placeholder="Ask about Jharkhand tourism..."
-            />
-            <button
-              type="submit"
-              className="ml-2 p-2 bg-green-600 hover:bg-green-700 text-white rounded-full shadow-md"
+            {/* Input Bar */}
+            <form
+              onSubmit={handleSubmit}
+              className="p-3 flex items-center bg-gray-800/70 border-t border-gray-700"
             >
-              <Send size={20} />
-            </button>
-          </form>
+              <input
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                className="flex-grow bg-transparent text-gray-100 px-4 py-2 focus:outline-none"
+                placeholder="Ask about Jharkhand tourism..."
+              />
+              <button
+                type="submit"
+                className="ml-2 p-2 bg-green-600 hover:bg-green-700 text-white rounded-full shadow-md"
+              >
+                <Send size={20} />
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </div>

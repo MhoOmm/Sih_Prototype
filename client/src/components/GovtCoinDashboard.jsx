@@ -252,7 +252,7 @@ export default function GovtCoinDashboard() {
         <div className=" rounded-2xl p-2 mb-8 shadow-2xl">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-4xl font-bold text-white mb-2">BHARRA Coin</h1>
+              <h1 className="text-4xl font-bold text-white mb-2">Aranya Coin</h1>
               <p className="text-green-100">Rack up coins monthly-great reviews mean sweet seller rewards!</p>
             </div>
             <div className="flex flex-col items-center ">
