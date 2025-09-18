@@ -8,7 +8,7 @@ const PlaceCard = ({ name, description, imageUrl, link }) => {
         <h3 className="font-bold text-xl mb-2 text-green-400">{name}</h3>
         <p className="text-gray-300 text-base mb-4">{description}</p>
         <Link to={link} className="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full transition-colors duration-300">
-          Explore More
+          Explore More...
         </Link>
       </div>
     </div>
