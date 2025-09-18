@@ -8,16 +8,17 @@ import VirtualTour from './components/VirtualTour';
 import Marketplaces from './components/MarketPlaces';
 import PlaceDetail from './components/PlaceDetail';
 import Login from './components/Login';
+import Logout from './components/Logout';
 import SignupSeller from './components/SignupSeller';
 import SignupUser from './components/SignupUser';
 
-const Logout = () => {
-  return (
-    <div className="flex items-center justify-center h-screen bg-black text-white">
-      <h1 className="text-2xl">You have been logged out.</h1>
-    </div>
-  );
-};
+// const Logout = () => {
+//   return (
+//     <div className="flex items-center justify-center h-screen bg-black text-white">
+//       <h1 className="text-2xl">You have been logged out.</h1>
+//     </div>
+//   );
+// };
 
 function App() {
   return (
