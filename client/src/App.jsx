@@ -23,7 +23,6 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* Routes within this group will share the Layout (and its Navbar) */}
         <Route element={<Layout />}>
           <Route path="/" element={<LandingPage />} />
           <Route path="/tour" element={<VirtualTour />} />
@@ -31,7 +30,6 @@ function App() {
           <Route path="/places/:placeId" element={<PlaceDetail />} /> 
         </Route>
 
-        {/* These routes are standalone (no Navbar) */}
         <Route path="/chat" element={<ChatAi />} />
         <Route path="/logout" element={<Logout />} />
         <Route path="/govt-coin-dash" element={<GovtCoinDashboard />} />
