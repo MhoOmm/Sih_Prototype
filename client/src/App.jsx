@@ -7,6 +7,9 @@ import LandingPage from './components/LandingPage';
 import VirtualTour from './components/VirtualTour';
 import Marketplaces from './components/MarketPlaces';
 import PlaceDetail from './components/PlaceDetail';
+import Login from './components/Login';
+import SignupSeller from './components/SignupSeller';
+import SignupUser from './components/SignupUser';
 
 const Logout = () => {
   return (
@@ -32,10 +35,12 @@ function App() {
         <Route path="/chat" element={<ChatAi />} />
         <Route path="/logout" element={<Logout />} />
         <Route path="/govt-coin-dash" element={<GovtCoinDashboard />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signupuser" element={<SignupUser />} />
+        <Route path="/signupseller" element={<SignupSeller />} />
       </Routes>
     </Router>
   );
 }
 
 export default App;
-
