@@ -6,6 +6,7 @@ import Layout from './components/Layout';
 import LandingPage from './components/LandingPage';
 import VirtualTour from './components/VirtualTour';
 import Marketplaces from './components/MarketPlaces';
+import PlaceDetail from './components/PlaceDetail';
 
 const Logout = () => {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/tour" element={<VirtualTour />} />
           <Route path="/markets" element={<Marketplaces />} />
+          <Route path="/places/:placeId" element={<PlaceDetail />} /> 
         </Route>
 
         {/* These routes are standalone (no Navbar) */}
