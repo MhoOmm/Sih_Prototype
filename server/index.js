@@ -6,7 +6,7 @@ const aiRouter = require("./src/routes/chatRouter")
 
 app.use(express.json());
 app.use(cors({
-    origin:"http://localhost:5173",
+    origin:"https://aranya-qhdk.onrender.com",
     credentials:true,
     allowedHeaders: ['Content-Type', 'Authorization']
 }))
