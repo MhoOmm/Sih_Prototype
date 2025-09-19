@@ -12,14 +12,15 @@ const SectionHeader = ({ icon, title }) => (
 
 const Marketplaces = () => {
   return (
-    <main className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+    <main className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 bg-black">
       <header className="text-center mb-16">
-        <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl text-green-400">
-          Local Marketplaces & Services
-        </h1>
-        <p className="mt-3 max-w-md mx-auto text-lg text-gray-300 sm:text-xl md:mt-5 md:max-w-3xl">
-          Discover authentic local products, cuisine, and guided experiences from trusted sellers.
-        </p>
+        <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl text-white mb-4">
+            Traditional <span className="text-green-400">Artisans</span> of Jharkhand
+          </h1>
+          <p className="mt-3 max-w-3xl mx-auto text-lg text-gray-300 sm:text-xl md:mt-5">
+              Discover authentic local products, cuisine, and guided experiences from trusted sellers. 
+          </p>
+
       </header>
 
       {/* Handicrafts Section */}

@@ -17,6 +17,7 @@ import SellerNavbar from './components/SellerNavbar';
 import ShowcaseForm from './components/ShowcaseForm';
 import MyCraftsPage from './components/MyCraftsPage';
 import SellerDashboard from './components/SellerDashboard';
+import GovNavbar from './components/GovNavbar';
 
 
 // const Logout = () => {
@@ -41,7 +42,7 @@ function App() {
 
         <Route path="/chat" element={<ChatAi />} />
         <Route path="/logout" element={<Logout />} />
-        <Route path="/govt-coin-dash" element={<GovtCoinDashboard />} />
+        <Route path="/govt-coin-dash" element={<><GovNavbar/><GovtCoinDashboard /></>} />
         <Route path="/login" element={<Login />} />
         <Route path="/signupuser" element={<SignupUser />} />
         <Route path="/signupseller" element={<SignupSeller />} />
