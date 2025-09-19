@@ -11,6 +11,13 @@ import Login from './components/Login';
 import Logout from './components/Logout';
 import SignupSeller from './components/SignupSeller';
 import SignupUser from './components/SignupUser';
+import SellerCard from './components/SellerCard';
+import SellerLandingPage from './components/SellerLandingPage';
+import SellerNavbar from './components/SellerNavbar';
+import ShowcaseForm from './components/ShowcaseForm';
+import MyCraftsPage from './components/MyCraftsPage';
+import SellerDashboard from './components/SellerDashboard';
+
 
 // const Logout = () => {
 //   return (
@@ -28,7 +35,8 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/tour" element={<VirtualTour />} />
           <Route path="/markets" element={<Marketplaces />} />
-          <Route path="/places/:placeId" element={<PlaceDetail />} /> 
+          <Route path="/places/:placeId" element={<PlaceDetail />} />
+           
         </Route>
 
         <Route path="/chat" element={<ChatAi />} />
@@ -37,6 +45,17 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signupuser" element={<SignupUser />} />
         <Route path="/signupseller" element={<SignupSeller />} />
+
+
+
+        {/* <Route path ="/sellerCard" element={<> <SellerNavbar/><SellerLandingPage/> </>}/> */}
+        <Route path ="/showcase-craft" element={<> <SellerNavbar/><ShowcaseForm/> </>}/>
+        <Route path ="/marketplace-view" element={<> <SellerNavbar/><Marketplaces/> </>}/>
+        <Route path ="/my-crafts" element={<> <SellerNavbar/><MyCraftsPage/> </>}/>
+        <Route path ="/seller-dashboard" element={<> <SellerNavbar/><SellerDashboard/> </>}/>
+        
+        
+        
       </Routes>
     </Router>
   );
