@@ -10,14 +10,14 @@ const PlaceDetail = () => {
     return (
       <div className="text-center py-10">
         <h1 className="text-2xl font-bold">Place not found!</h1>
-        <Link to="/" className="text-green-400 hover:underline mt-4 inline-block">Go back to Home</Link>
+        <Link to="/home" className="text-green-400 hover:underline mt-4 inline-block">Go back to Home</Link>
       </div>
     );
   }
 
   return (
     <div className="max-w-4xl mx-auto py-12 px-4">
-      <Link to="/" className="flex items-center text-green-400 mb-6 hover:underline">
+      <Link to="/home" className="flex items-center text-green-400 mb-6 hover:underline">
         <ArrowLeft size={20} className="mr-2" />
         Back to all places
       </Link>

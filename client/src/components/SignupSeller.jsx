@@ -142,7 +142,7 @@ const SignupSeller = () => {
           {/* Submit Button */}
           <button
             type="submit"
-            onClick={() => navigate("/seller-dashboard")}
+            onClick={() => navigate("/showcase-craft")}
             className="w-full bg-gradient-to-r from-green-500 to-green-600 text-white font-semibold py-3 rounded-xl hover:from-green-600 hover:to-green-700 transition-all duration-200 transform hover:scale-105 shadow-lg shadow-green-500/25 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:ring-offset-black"
           >
             Create Seller Account

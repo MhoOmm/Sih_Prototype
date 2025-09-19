@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { LogOut, Users, Store, BarChart3, Menu, Shield } from 'lucide-react';
+import { LogOut, Users, Store, BarChart3, Menu, Shield,Sticker } from 'lucide-react';
 import Logo from "../assets/Logo.png"
 
 const GovNavbar = () => {
@@ -12,7 +12,7 @@ const GovNavbar = () => {
         <div className="flex items-center justify-between h-16">
           
           <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center space-x-2 gap-3">
+            <Link to="/govt-coin-dash" className="flex items-center space-x-2 gap-3">
               <img 
                 src={Logo} 
                 alt="Jharkhand Logo" 
@@ -25,7 +25,7 @@ const GovNavbar = () => {
           
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
+            <div className="ml-10 flex items-baseline space-x-[4rem]">
               <Link 
                 to="/govt-coin-dash" 
                 className="flex items-center text-white/90 hover:text-white hover:bg-white/20 px-3 py-2 rounded-xl text-sm font-medium transition-all duration-200"
@@ -33,22 +33,10 @@ const GovNavbar = () => {
                 <BarChart3 size={20} className="mr-2"/> Analytics Dashboard
               </Link>
               <Link 
-                to="/seller-dashboard" 
+                to="/sentiments" 
                 className="flex items-center text-white/90 hover:text-white hover:bg-white/20 px-3 py-2 rounded-xl text-sm font-medium transition-all duration-200"
               >
-                <Store size={20} className="mr-2"/> Seller Management
-              </Link>
-              <Link 
-                to="/" 
-                className="flex items-center text-white/90 hover:text-white hover:bg-white/20 px-3 py-2 rounded-xl text-sm font-medium transition-all duration-200"
-              >
-                <Users size={20} className="mr-2"/> User Management
-              </Link>
-              <Link 
-                to="/platform-overview" 
-                className="flex items-center text-white/90 hover:text-white hover:bg-white/20 px-3 py-2 rounded-xl text-sm font-medium transition-all duration-200"
-              >
-                <Shield size={20} className="mr-2"/> Platform Overview
+                <Sticker size={20} className="mr-2"/> Emotion Lens
               </Link>
             </div>
           </div>
@@ -85,12 +73,7 @@ const GovNavbar = () => {
             >
               <BarChart3 size={18} className="mr-2"/> Analytics Dashboard
             </Link>
-            <Link 
-              to="/seller-management" 
-              className="flex items-center text-white/90 hover:text-white hover:bg-white/20 px-3 py-2 rounded-xl text-sm font-medium transition-all duration-200"
-            >
-              <Store size={18} className="mr-2"/> Seller Management
-            </Link>
+            
             <Link 
               to="/user-management" 
               className="flex items-center text-white/90 hover:text-white hover:bg-white/20 px-3 py-2 rounded-xl text-sm font-medium transition-all duration-200"
@@ -98,10 +81,10 @@ const GovNavbar = () => {
               <Users size={18} className="mr-2"/> User Management
             </Link>
             <Link 
-              to="/platform-overview" 
+              to="/sentiments" 
               className="flex items-center text-white/90 hover:text-white hover:bg-white/20 px-3 py-2 rounded-xl text-sm font-medium transition-all duration-200"
             >
-              <Shield size={18} className="mr-2"/> Platform Overview
+              <Sticker size={18} className="mr-2"/> Emotion Lens
             </Link>
             
             {/* Mobile Logout Section */}

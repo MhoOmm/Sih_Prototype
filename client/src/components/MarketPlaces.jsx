@@ -12,7 +12,7 @@ const SectionHeader = ({ icon, title }) => (
 
 const Marketplaces = () => {
   return (
-    <main className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 bg-black">
+    <main className="mx-auto py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-black via-gray-900 to-green-950">
       <header className="text-center mb-16">
         <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl text-white mb-4">
             Traditional <span className="text-green-400">Artisans</span> of Jharkhand

@@ -306,7 +306,7 @@ const SellerDashboard = () => {
           {/* Revenue Bar Chart */}
           <div className="bg-gray-800/60 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
             <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
-              <DollarSign className="mr-2 text-blue-400" size={20} />
+              <IndianRupee className="mr-2 text-blue-400" size={20} />
               Monthly Revenue
             </h3>
             <div style={{ height: '300px' }}>

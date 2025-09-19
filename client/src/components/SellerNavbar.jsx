@@ -20,7 +20,7 @@ const SellerNavbar = () => {
         <div className="flex items-center justify-between h-16">
           
           <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center space-x-2 gap-3">
+            <Link to="/seller-dashboard" className="flex items-center space-x-2 gap-3">
               <img 
                 src={Logo} 
                 alt="Jharkhand Logo" 

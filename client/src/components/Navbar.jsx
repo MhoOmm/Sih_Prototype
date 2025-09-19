@@ -18,7 +18,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           
           <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center space-x-2 gap-3">
+            <Link to="/home" className="flex items-center space-x-2 gap-3">
               <img 
                 src={Logo} 
                 alt="Jharkhand Logo" 
@@ -32,7 +32,7 @@ const Navbar = () => {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               <Link 
-                to="/" 
+                to="/home" 
                 className="flex items-center text-white/90 hover:text-white hover:bg-white/20 px-3 py-2 rounded-xl text-sm font-medium transition-all duration-200"
               >
                 <Home size={20} className="mr-2"/> Home
@@ -109,7 +109,7 @@ const Navbar = () => {
         <div className="md:hidden bg-white/10 backdrop-filter backdrop-blur-sm border-t border-white/20">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <Link 
-              to="/" 
+              to="/home" 
               className="flex items-center text-white/90 hover:text-white hover:bg-white/20 px-3 py-2 rounded-xl text-sm font-medium transition-all duration-200"
             >
               <Home size={18} className="mr-2"/> Home

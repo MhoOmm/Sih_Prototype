@@ -22,7 +22,7 @@ const Login = () => {
     e.preventDefault();
 
     if (role === "user") {
-      navigate("/");
+      navigate("/home");
     } else if (role === "seller") {
       navigate("/seller-dashboard");
     } else if (role === "government") {

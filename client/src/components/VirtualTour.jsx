@@ -11,14 +11,16 @@ const VirtualTour = () => {
       </header>
       <div className="relative w-full overflow-hidden rounded-2xl shadow-2xl border border-gray-700/50 aspect-video">
         <iframe
-          src="https://www.youtube.com/embed/eDIJv93S_tQ?si=HM3kD4zhmE3CSig6"
-          title="YouTube video player"
-          className="absolute inset-0 w-full h-full"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerPolicy="strict-origin-when-cross-origin"
-          allowFullScreen
-        ></iframe>
+  src="https://www.youtube.com/embed/eDIJv93S_tQ?autoplay=1&mute=1&loop=1&playlist=eDIJv93S_tQ&controls=1"
+  title="YouTube video player"
+  className="absolute inset-0 w-full h-full"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerPolicy="strict-origin-when-cross-origin"
+  allowFullScreen
+></iframe>
+
+
       </div>
     </main>
   );

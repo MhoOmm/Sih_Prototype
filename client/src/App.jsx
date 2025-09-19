@@ -18,6 +18,7 @@ import ShowcaseForm from './components/ShowcaseForm';
 import MyCraftsPage from './components/MyCraftsPage';
 import SellerDashboard from './components/SellerDashboard';
 import GovNavbar from './components/GovNavbar';
+import Sentiment from './components/Sentiment';
 
 
 // const Logout = () => {
@@ -33,7 +34,7 @@ function App() {
     <Router>
       <Routes>
         <Route element={<Layout />}>
-          <Route path="/" element={<LandingPage />} />
+          <Route path="/home" element={<LandingPage />} />
           <Route path="/tour" element={<VirtualTour />} />
           <Route path="/markets" element={<Marketplaces />} />
           <Route path="/places/:placeId" element={<PlaceDetail />} />
@@ -43,9 +44,10 @@ function App() {
         <Route path="/chat" element={<ChatAi />} />
         <Route path="/logout" element={<Logout />} />
         <Route path="/govt-coin-dash" element={<><GovNavbar/><GovtCoinDashboard /></>} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Login />} />
         <Route path="/signupuser" element={<SignupUser />} />
         <Route path="/signupseller" element={<SignupSeller />} />
+        <Route path="/sentiments" element={<Sentiment />} />
 
 
 
