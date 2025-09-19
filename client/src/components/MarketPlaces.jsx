@@ -1,5 +1,5 @@
 import { sellersData } from '../data/marketplacesData';
-import SellerCard from './SellerCard';
+import MarketCard from './MarketCard';
 import { ShoppingBag, UtensilsCrossed, Sparkles, UserCheck } from 'lucide-react';
 
 // Helper component for section headers
@@ -30,7 +30,7 @@ const Marketplaces = () => {
         />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {sellersData.handicrafts.map((seller) => (
-            <SellerCard key={seller.id} {...seller} />
+            <MarketCard key={seller.id} {...seller} />
           ))}
         </div>
       </section>
@@ -43,7 +43,7 @@ const Marketplaces = () => {
         />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {sellersData.souvenirs.map((seller) => (
-            <SellerCard key={seller.id} {...seller} />
+            <MarketCard key={seller.id} {...seller} />
           ))}
         </div>
       </section>
@@ -56,7 +56,7 @@ const Marketplaces = () => {
         />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {sellersData["food-and-beverage"].map((seller) => (
-            <SellerCard key={seller.id} {...seller} />
+            <MarketCard key={seller.id} {...seller} />
           ))}
         </div>
       </section>
@@ -69,7 +69,7 @@ const Marketplaces = () => {
         />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {sellersData["tour-guides"].map((seller) => (
-            <SellerCard key={seller.id} {...seller} />
+            <MarketCard key={seller.id} {...seller} />
           ))}
         </div>
       </section>

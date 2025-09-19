@@ -1,6 +1,6 @@
 import { MapPin } from 'lucide-react';
 
-const SellerCard = ({ name, description, imageUrl, location }) => {
+const MarketCard = ({ name, description, imageUrl, location }) => {
   return (
     <div className="bg-gray-800/60 backdrop-blur-sm rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300 border border-gray-700">
       <div className="relative">
@@ -21,4 +21,4 @@ const SellerCard = ({ name, description, imageUrl, location }) => {
   );
 };
 
-export default SellerCard;
+export default MarketCard;
