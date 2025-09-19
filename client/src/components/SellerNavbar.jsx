@@ -84,10 +84,10 @@ const SellerNavbar = () => {
                       <div className="text-green-400 text-xs">{user.role}</div>
                     </div>
                     <Link 
-                      to="/profile" 
+                      to="/seller-idcard" 
                       className="flex items-center w-full text-left px-4 py-2 text-sm text-white/90 hover:bg-white/20 hover:text-white transition-all duration-200"
                     >
-                      Profile Settings
+                      Aranya ID
                     </Link>
                     <Link 
                       to="/logout" 

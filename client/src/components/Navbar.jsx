@@ -78,7 +78,7 @@ const Navbar = () => {
                 {isProfileOpen && (
                   <div className="origin-top-right absolute right-0 mt-2 w-48 rounded-xl shadow-lg bg-white/20 backdrop-filter backdrop-blur-md border border-white/30">
                     <div className="px-4 py-2 text-sm text-white border-b border-white/20">
-                      <strong className="font-bold">{user.name}</strong>
+                      <Link to="/seller-idcard" className="font-bold">{user.name}</Link>
                     </div>
                     <Link 
                       to="/logout" 

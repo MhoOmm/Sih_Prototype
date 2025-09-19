@@ -19,6 +19,7 @@ import MyCraftsPage from './components/MyCraftsPage';
 import SellerDashboard from './components/SellerDashboard';
 import GovNavbar from './components/GovNavbar';
 import Sentiment from './components/Sentiment';
+import GovtSellerIDCard from './components/GovtSellerIDCard';
 
 
 // const Logout = () => {
@@ -56,8 +57,13 @@ function App() {
         <Route path ="/marketplace-view" element={<> <SellerNavbar/><Marketplaces/> </>}/>
         <Route path ="/my-crafts" element={<> <SellerNavbar/><MyCraftsPage/> </>}/>
         <Route path ="/seller-dashboard" element={<> <SellerNavbar/><SellerDashboard/> </>}/>
+
+
+
         
-        
+        <Route path="/seller-idcard" element={<GovtSellerIDCard/>} />
+
+
         
       </Routes>
     </Router>
