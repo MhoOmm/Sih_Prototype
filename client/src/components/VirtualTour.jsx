@@ -1,18 +1,31 @@
+import jharkhandvlog from "../assets/Vids/vlog.mp4";
+
 const VirtualTour = () => {
   return (
-    <main className="max-w-4xl mx-auto py-12 px-4">
-      <h1 className="text-4xl font-bold text-center text-green-400 mb-8">Virtual Tour of Jharkhand</h1>
-      <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-2xl border border-gray-700">
-        <iframe
-          src="https://www.youtube.com/embed/f-82U52J2Fk"
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-          className="w-full h-full"
-        ></iframe>
+    <main className="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+      <header className="text-center mb-10">
+        <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl text-green-400">
+          A Cinematic Journey
+        </h1>
+        <p className="mt-3 max-w-2xl mx-auto text-lg text-gray-300">
+          Immerse yourself in the stunning landscapes and vibrant culture of Jharkhand.
+        </p>
+      </header>
+      
+      {/* Video Player Section */}
+      <div className="w-full rounded-xl overflow-hidden shadow-2xl border border-gray-700/50">
+        <video 
+          className="w-full h-full object-cover"
+          src={jharkhandvlog}
+          autoPlay
+          loop
+          muted
+          controls 
+          title="A virtual tour of Jharkhand"
+        >
+          Your browser does not support the video tag.
+        </video>
       </div>
-      <p className="text-center text-gray-400 mt-4">Enjoy a cinematic journey through the stunning landscapes of Jharkhand.</p>
     </main>
   );
 };
