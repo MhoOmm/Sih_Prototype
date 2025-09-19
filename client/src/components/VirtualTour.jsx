@@ -1,7 +1,6 @@
 const VirtualTour = () => {
   return (
     <main className="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-      {/* Heading */}
       <header className="text-center mb-10">
         <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl text-green-400 drop-shadow-lg">
           A Cinematic Journey
@@ -10,8 +9,6 @@ const VirtualTour = () => {
           Immerse yourself in the stunning landscapes and vibrant culture of Jharkhand.
         </p>
       </header>
-
-      {/* Responsive Video Player */}
       <div className="relative w-full overflow-hidden rounded-2xl shadow-2xl border border-gray-700/50 aspect-video">
         <iframe
           src="https://www.youtube.com/embed/eDIJv93S_tQ?si=HM3kD4zhmE3CSig6"
