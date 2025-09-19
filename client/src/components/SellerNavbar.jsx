@@ -159,10 +159,10 @@ const SellerNavbar = () => {
               </div>
               <div className="mt-3 px-2 space-y-1">
                 <Link 
-                  to="/profile" 
+                  to="/seller-idcard" 
                   className="flex items-center text-white/90 hover:text-white hover:bg-white/20 px-3 py-2 rounded-xl text-sm font-medium transition-all duration-200"
                 >
-                  Profile Settings
+                  Aranya ID
                 </Link>
                 <Link 
                   to="/logout" 
