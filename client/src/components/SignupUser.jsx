@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom';
+import { NavLink,useNavigate } from 'react-router-dom';
+import Logo from '../assets/Logo.png'
 
 const SignupUser = () => {
   const [credentials, setCredentials] = useState({
@@ -9,15 +10,18 @@ const SignupUser = () => {
     password: "",
   });
 
+  const navigate = useNavigate();
+
+
   // List of countries for dropdown
   const countries = [
     "Afghanistan", "Albania", "Algeria", "Argentina", "Australia", "Austria", 
     "Bangladesh", "Belgium", "Brazil", "Canada", "Chile", "China", "Colombia", 
     "Denmark", "Egypt", "Finland", "France", "Germany", "Ghana", "Greece", 
     "India", "Indonesia", "Iran", "Iraq", "Ireland", "Israel", "Italy", "Japan", 
-    "Jordan", "Kenya", "South Korea", "Malaysia", "Mexico", "Netherlands", 
+    "Jordan", "Kenya", "Malaysia", "Mexico", "Netherlands", 
     "New Zealand", "Nigeria", "Norway", "Pakistan", "Philippines", "Poland", 
-    "Portugal", "Russia", "Saudi Arabia", "Singapore", "South Africa", "Spain", 
+    "Portugal", "Russia", "Saudi Arabia", "Singapore", "South Africa","South Korea", "Spain", 
     "Sri Lanka", "Sweden", "Switzerland", "Thailand", "Turkey", "Ukraine", 
     "United Kingdom", "United States", "Vietnam", "Other"
   ];
@@ -29,7 +33,7 @@ const SignupUser = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(`Signing up with:\nEmail: ${credentials.email}\nPassword: ${credentials.password}`);
+    // alert(`Signing up with:\nEmail: ${credentials.email}\nPassword: ${credentials.password}`);
     setCredentials({ email: "", password: "" , name:"", nationality: ""});
   };
 
@@ -42,16 +46,18 @@ const SignupUser = () => {
       <div className="bg-white/5 backdrop-blur-xl border border-gray-800/50 p-8 rounded-2xl shadow-2xl w-full max-w-md relative z-10">
         {/* Logo/Brand Section */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-full mb-4 shadow-lg">
-            <span className="text-white font-bold text-2xl">A</span>
-          </div>
-          <h1 className="text-3xl font-bold text-white mb-2">ARNAYA</h1>
+
+          {/* ARANYA LOGO INSERTION */}
+          <img 
+          src={Logo} 
+          alt="logo_aranya"
+          className="w-32 h-auto mb-6 mx-auto" />
           <p className="text-gray-400 text-sm">Discover Jharkhand's Beauty!</p>
         </div>
 
         {/* User Signup Title */}
         <h2 className="text-2xl font-bold mb-6 text-center text-white">
-          Create Account
+          CREATE AN ACCOUNT
         </h2>
 
         <form onSubmit={handleSubmit} className="space-y-6">
@@ -99,7 +105,7 @@ const SignupUser = () => {
               required
               className="w-full bg-black/20 border border-gray-700 text-white px-4 py-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200 hover:border-gray-600 appearance-none cursor-pointer"
             >
-              <option value="" className="bg-gray-900 text-gray-400">
+              <option value="" className="bg-gray-900 text-gray">
                 Select your country
               </option>
               {countries.map((country, index) => (
@@ -176,12 +182,12 @@ const SignupUser = () => {
           {/* Submit Button */}
           <button
             type="submit"
+            onClick={() => navigate("/")}
             className="w-full bg-gradient-to-r from-green-500 to-green-600 text-white font-semibold py-3 rounded-xl hover:from-green-600 hover:to-green-700 transition-all duration-200 transform hover:scale-105 shadow-lg shadow-green-500/25 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:ring-offset-black"
-          >
-            Create Account
+          >Create Account
           </button>
 
-          {/* Login Link */}
+          {/* Login Link
           <p className="text-sm text-gray-400 text-center pt-4 border-t border-gray-800">
             Already have an account?{" "}
             <NavLink 
@@ -190,7 +196,7 @@ const SignupUser = () => {
             >
               Sign in
             </NavLink>
-          </p>
+          </p> */}
         </form>
 
         {/* Welcome Message */}

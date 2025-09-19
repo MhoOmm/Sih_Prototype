@@ -38,7 +38,7 @@ const Logout = () => {
 
     <footer className="absolute bottom-0 left-0 w-full  py-6 z-20">
       <div className="max-w-7xl mx-auto px-4 text-center text-white font-bold">
-        © 2025 Jharkhand Tourism. All Rights Reserved.
+        © 2025 Aranya. All Rights Reserved.
       </div>
     </footer>
     

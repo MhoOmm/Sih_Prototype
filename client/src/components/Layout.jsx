@@ -11,7 +11,7 @@ const Layout = () => {
       </main>
       <footer className="bg-gray-900/50 mt-12 py-6">
         <div className="max-w-7xl mx-auto px-4 text-center text-gray-400">
-          © 2025 Jharkhand Tourism. All Rights Reserved.
+          © 2025 Aranya. All Rights Reserved.
         </div>
       </footer>
     </div>

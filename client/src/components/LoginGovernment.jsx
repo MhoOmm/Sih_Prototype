@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { NavLink,useNavigate } from "react-router-dom";
-import Logo from "../assets/Logo.png";
+import { NavLink } from "react-router-dom";
+import Logo from "../assets/Logo.png"
 
-const Login = () => {
+const LoginGovernment = () => {
   const [role, setRole] = useState("user"); // user, seller, government
   const [formData, setFormData] = useState({
     email: "",
@@ -11,8 +11,6 @@ const Login = () => {
     unique_id: "",
   });
 
-  const navigate = useNavigate();
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -20,15 +18,6 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    if (role === "user") {
-      navigate("/");
-    } else if (role === "seller") {
-      navigate("/seller-dashboard");
-    } else if (role === "government") {
-      navigate("/govt-coin-dash");
-    }
-
     setFormData({
       email: "",
       password: "",
@@ -203,4 +192,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default LoginGovernment;

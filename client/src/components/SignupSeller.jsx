@@ -1,7 +1,11 @@
 import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
+import Logo from '../assets/Logo.png'
 
 const SignupSeller = () => {
+
+  const navigate = useNavigate();
+
   const [credentials, setCredentials] = useState({
     name:"",
     email: "",
@@ -29,11 +33,13 @@ const SignupSeller = () => {
       <div className="bg-white/5 backdrop-blur-xl border border-gray-800/50 p-8 rounded-2xl shadow-2xl w-full max-w-md relative z-10">
         {/* Logo/Brand Section */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-full mb-4 shadow-lg">
-            <span className="text-white font-bold text-2xl">A</span>
-          </div>
-          <h1 className="text-3xl font-bold text-white mb-2">ARNAYA</h1>
-          <p className="text-gray-400 text-sm">Join Our Community!</p>
+
+          {/* ARANYA LOGO INSERTION */}
+          <img 
+          src={Logo} 
+          alt="logo_aranya"
+          className="w-32 h-auto mb-6 mx-auto" />
+          <p className="text-gray-400 text-sm">Discover Jharkhand's Beauty!</p>
         </div>
 
         {/* Seller Signup Title */}
@@ -136,21 +142,22 @@ const SignupSeller = () => {
           {/* Submit Button */}
           <button
             type="submit"
+            onClick={() => navigate("/seller-dashboard")}
             className="w-full bg-gradient-to-r from-green-500 to-green-600 text-white font-semibold py-3 rounded-xl hover:from-green-600 hover:to-green-700 transition-all duration-200 transform hover:scale-105 shadow-lg shadow-green-500/25 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:ring-offset-black"
           >
             Create Seller Account
           </button>
 
           {/* Login Link */}
-          <p className="text-sm text-gray-400 text-center pt-4 border-t border-gray-800">
+          {/* <p className="text-sm text-gray-400 text-center pt-4 border-t border-gray-800">
             Already have an account?{" "}
             <NavLink 
               to="/login"
               className="text-green-400 hover:text-green-300 font-medium transition-colors"
             >
               Sign in
-            </NavLink>
-          </p>
+            </NavLink> 
+          </p> */}
         </form>
 
         {/* Additional Info */}
